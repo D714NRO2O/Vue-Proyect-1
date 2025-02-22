@@ -1,10 +1,12 @@
 <template>
   <nav>
     <RouterLink to="/">Log In</RouterLink>
+    <RouterLink to="/reset-password">Restablecer Contraseña</RouterLink>
+    <RouterLink to="sign-up">Sign Up</RouterLink>
     <RouterLink to="/user">Usuario</RouterLink>
     <RouterLink to="/support">Soporte</RouterLink>
     <RouterLink to="/settings">Configuración</RouterLink>
-    <RouterLink to="/reset-password">Restablecer Contraseña</RouterLink>
+
   </nav>
 </template>
 

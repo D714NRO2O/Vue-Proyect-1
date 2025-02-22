@@ -17,3 +17,4 @@ import LogIn from '@/components/LogIn.vue'
   height: 100vh;
 }
 </style>
+

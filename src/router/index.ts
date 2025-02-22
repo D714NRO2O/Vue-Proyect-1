@@ -1,9 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UserView from '../views/UserView.vue'
-import Support from '../views/Support.vue'
-import Settings from '../views/Settings.vue'
+import UserView from '../views/UserView.vue'/*pendiente*/
+import Support from '../views/Support.vue'/*pendiente*/
+import Settings from '../views/Settings.vue'/*pendiente*/
 import ResetPassword from '../views/ResetPassword.vue'
-import LogIn from '../views/LogIn.vue'
+import LogIn from '../views/LogInView.vue'
+import SignUp from '@/components/SignUp.vue'
+import About from '../views/AboutView.vue' /*pendiente*/
+
+import AuthLayout from '@/layouts/AuthLayout.vue'
+import MainLayout from '@/layouts/MainLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,32 +16,49 @@ const router = createRouter({
     {
       path: '/',
       name: 'Log In',
-      component: LogIn,
+      component: AuthLayout,
+      children: [
+        {path: '',
+          component: LogIn
+        },
+        {path: 'reset-password',
+          component: ResetPassword
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: About,
+        },
+        {
+          path: '/sign-up',
+          name: 'Sign Up',
+          component: SignUp,
+        },
+
+      ]
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      path: '/main',
+      name: 'main',
+      component: MainLayout,
+      children: [
+        {
+          path: '',
+          name: 'user',
+          component: UserView,
+        },
+        {
+          path: '/support',
+          name: 'support',
+          component: Support,
+        },
+        {
+          path: '/settings',
+          name: 'settings',
+          component: Settings,
+        },
+      ]
     },
-    {
-      path: '/user',
-      name: 'user',
-      component: UserView,
-    },
-    {
-      path: '/support',
-      name: 'support',
-      component: Support,
-    },
-    {
-      path: '/settings',
-      name: 'settings',
-      component: Settings,
-    },
-    { path: '/reset-password', name: 'reset-password', component: ResetPassword },
   ],
 })
 
