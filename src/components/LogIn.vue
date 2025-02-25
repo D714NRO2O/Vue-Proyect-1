@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="form-container">
     <label for="username">Username</label>

@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UserView from '../views/UserView.vue'/*pendiente*/
-import Support from '../views/Support.vue'/*pendiente*/
-import Settings from '../views/Settings.vue'/*pendiente*/
-import ResetPassword from '../views/ResetPassword.vue'
-import LogIn from '../views/LogInView.vue'
-import SignUp from '@/components/SignUp.vue'
-import About from '../views/AboutView.vue' /*pendiente*/
+import UserView from '@/views/UserView.vue'
+import Support from '@/views/Support.vue'/*pendiente*/
+import Settings from '@/views/Settings.vue'/*pendiente*/
+import ResetPassword from '@/views/ResetPassword.vue'
+import LogIn from '@/views/LogInView.vue'
+import SignUp from '@/views/SignUpView.vue'
+import About from '@/views/AboutView.vue' /*pendiente*/
 
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
@@ -43,7 +43,7 @@ const router = createRouter({
       component: MainLayout,
       children: [
         {
-          path: '',
+          path: '/user',
           name: 'user',
           component: UserView,
         },
