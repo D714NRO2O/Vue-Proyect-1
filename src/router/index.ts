@@ -25,12 +25,12 @@ const router = createRouter({
           component: ResetPassword
         },
         {
-          path: '/about',
+          path: 'about',
           name: 'about',
           component: About,
         },
         {
-          path: '/sign-up',
+          path: 'sign-up',
           name: 'Sign Up',
           component: SignUp,
         },
@@ -43,17 +43,17 @@ const router = createRouter({
       component: MainLayout,
       children: [
         {
-          path: '/user',
+          path: 'user',
           name: 'user',
           component: UserView,
         },
         {
-          path: '/support',
+          path: 'support',
           name: 'support',
           component: Support,
         },
         {
-          path: '/settings',
+          path: 'settings',
           name: 'settings',
           component: Settings,
         },

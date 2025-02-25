@@ -11,6 +11,7 @@ import ResetPassword from '@/components/ResetPassword.vue'
 
 <style scoped>
 .reset-password {
+  color: black;
   display: grid;
   place-items: center;
   height: 100vh;

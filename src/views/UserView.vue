@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="userView">
     <h1>Perfil de Usuario</h1>
     <p>Aquí puedes ver y actualizar tu información personal.</p>
     <MainDashboard />
@@ -12,7 +12,8 @@
 
 <style>
 @media (min-width: 1024px) {
-  .about {
+  .userView {
+    color: black;
     min-height: 100vh;
     display: flex;
     align-items: center;
