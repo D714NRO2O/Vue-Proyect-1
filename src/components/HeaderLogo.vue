@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Flags from '@/components/Flags.vue';
+/*import FlagsItem from '@/components/FlagsItem.vue'*/
 </script>
 
 <template>
   <header>
     <img alt="Logo Lingüi" class="logo" src="@/assets/logoLingui.png" width="280" height="125" />
-    <Flags />
+    <!--FlagsItem /-->
   </header>
 </template>
 
