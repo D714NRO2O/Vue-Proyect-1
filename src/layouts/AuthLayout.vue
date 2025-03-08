@@ -19,7 +19,8 @@ import NavBar from '@/components/NavBar.vue'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #745cd3;
+  background-color: rgb(198, 192, 255);
+  border-radius: 15px;
 }
 
 .auth-layout > * {
@@ -28,7 +29,7 @@ import NavBar from '@/components/NavBar.vue'
 
 main.auth-content {
   flex-grow: 1;
-  background: #5d27d2;
+  background: #9367f3;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin: 20px;
