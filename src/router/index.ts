@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import UserView from '@/views/UserView.vue'
 import Support from '@/views/Support.vue'/*pendiente*/
-import Settings from '@/views/Settings.vue'/*pendiente*/
+import Settings from '@/views/SettingsView.vue'/*pendiente*/
 import ResetPassword from '@/views/ResetPassword.vue'
 import LogIn from '@/views/LogInView.vue'
 import SignUp from '@/views/SignUpView.vue'

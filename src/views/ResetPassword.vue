@@ -1,7 +1,7 @@
 <template>
   <div class="reset-password">
     <h1>Restablecer Contraseña</h1>
-    <ResetPassword />
+   <!-- <ResetPassword /> -->
   </div>
 </template>
 
