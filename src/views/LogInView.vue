@@ -14,7 +14,6 @@ import LogIn from '@/components/LogIn.vue'
   color: black;
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100%;
 }
 </style>
-

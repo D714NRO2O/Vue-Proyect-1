@@ -27,7 +27,6 @@
   </div>
 </template>
 
-
 <style scoped>
 /* Estilos específicos para este componente */
 .dashboard {

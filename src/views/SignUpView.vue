@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import SignUp from '@/components/SignUp.vue';
-
+import SignUp from '@/components/SignUp.vue'
 </script>
 
 <template>
@@ -15,6 +14,7 @@ import SignUp from '@/components/SignUp.vue';
   color: black;
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100%;
+  font-size: 10px;
 }
 </style>

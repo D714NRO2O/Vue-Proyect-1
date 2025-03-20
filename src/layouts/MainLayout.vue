@@ -1,6 +1,4 @@
 <template>
-
-
   <v-app>
     <!-- Barra superior -->
     <v-app-bar app color="primary" dark>
@@ -8,7 +6,7 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
-      <v-app-bar-title>Dashboard - Spa de Belleza</v-app-bar-title>
+      <v-app-bar-title>Dashboard - Lingüi Academy</v-app-bar-title>
 
       <v-spacer />
 
@@ -31,23 +29,18 @@
     <v-main>
       <v-container>
         <div class="layout-container">
-    <Header />
-    <NavBar />
-    <main class="main-content">
-      <RouterView />
-    </main>
-    <footer class="app-footer">
-      © 2025 - Lingüi App
-    </footer>
-  </div>
-
+          <Header />
+          <NavBar />
+          <main class="main-content">
+            <RouterView />
+          </main>
+          <!--<footer class="app-footer">© 2025 - Lingüi App</footer>-->
+        </div>
       </v-container>
     </v-main>
 
     <!-- Footer -->
-    <v-footer app>
-      © {{ new Date().getFullYear() }} Spa de Belleza
-    </v-footer>
+    <v-footer app> © {{ new Date().getFullYear() }} Lingüi Academy </v-footer>
   </v-app>
 </template>
 
@@ -63,14 +56,14 @@ const drawer = ref(false) // Controla el estado del sidebar
 .layout-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vh;
   padding-top: 64px;
   background-color: #f5f5f5;
   font-family: 'Arial', sans-serif;
 }
 
 main {
-  flex: 1;  /* Ocupa todo el espacio restante */
+  flex: 1; /* Ocupa todo el espacio restante */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -78,6 +71,7 @@ main {
 }
 
 .main-content {
+  height: 60vh;
   width: 100%;
   max-width: 1200px;
   background-color: #fff;
@@ -93,5 +87,9 @@ main {
   background-color: #333;
   color: white;
   font-size: 0.875rem;
+}
+
+.layout-container {
+  height: 20vh;
 }
 </style>

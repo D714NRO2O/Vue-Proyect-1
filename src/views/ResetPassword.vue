@@ -1,7 +1,7 @@
 <template>
   <div class="reset-password">
     <h1>Restablecer Contraseña</h1>
-   <!-- <ResetPassword /> -->
+    <ResetPassword />
   </div>
 </template>
 
@@ -14,6 +14,6 @@ import ResetPassword from '@/components/ResetPassword.vue'
   color: black;
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100%;
 }
 </style>
