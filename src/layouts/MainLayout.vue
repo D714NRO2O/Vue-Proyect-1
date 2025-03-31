@@ -10,12 +10,37 @@
 
       <v-spacer />
 
-      <v-btn icon>
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
+      <!-- Menú desplegable de usuario -->
+      <v-menu offset-y>
+        <template v-slot:activator="{ props }">
+          <v-btn icon v-bind="props">
+            <v-icon>mdi-account</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item @click="goToProfile">
+            <v-list-item-title>✏️ Editar Perfil</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="goToSettings">
+            <v-list-item-title>⚙️ Configuración</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item @click="goToSupport">
+            <v-list-item-title>🛠️ Soporte</v-list-item-title>
+          </v-list-item>
+
+          <v-divider />
+
+          <v-list-item @click="logout">
+            <v-list-item-title>🚪 Cerrar sesión</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
-    <!-- Menú lateral (sidebar desplegable) -->
+    <!-- Menú lateral -->
     <v-navigation-drawer v-model="drawer" app>
       <v-list>
         <v-list-item title="Inicio" prepend-icon="mdi-home" />
@@ -34,7 +59,6 @@
           <main class="main-content">
             <RouterView />
           </main>
-          <!--<footer class="app-footer">© 2025 - Lingüi App</footer>-->
         </div>
       </v-container>
     </v-main>
@@ -47,9 +71,27 @@
 <script setup lang="ts">
 import Header from '@/components/HeaderLogo.vue'
 import NavBar from '@/components/NavBar.vue'
-
 import { ref } from 'vue'
-const drawer = ref(false) // Controla el estado del sidebar
+import { useRouter } from 'vue-router'
+
+const drawer = ref(false) // Estado del sidebar
+const router = useRouter() // Para redirecciones
+
+const goToProfile = () => {
+  router.push('/profile') // Redirigir a Editar Perfil
+}
+
+const goToSettings = () => {
+  router.push('/main/settings') // Redirigir a Configuración
+}
+
+const goToSupport = () => {
+  router.push('/main/support') // Redirigir a Soporte
+}
+
+const logout = () => {
+  alert('Sesión cerrada') // Aquí puedes limpiar la sesión y redirigir
+}
 </script>
 
 <style scoped>
@@ -62,14 +104,6 @@ const drawer = ref(false) // Controla el estado del sidebar
   font-family: 'Arial', sans-serif;
 }
 
-main {
-  flex: 1; /* Ocupa todo el espacio restante */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-}
-
 .main-content {
   height: 60vh;
   width: 100%;
@@ -79,17 +113,5 @@ main {
   border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
-}
-
-.app-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  font-size: 0.875rem;
-}
-
-.layout-container {
-  height: 20vh;
 }
 </style>
